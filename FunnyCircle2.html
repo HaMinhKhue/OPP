@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px"height="768px"style="border:1px solid #d3d3d3;"></canvas>
+<script>
+    function Circle(x,y,radius) {
+        this.x=x;this.y=y;this.radius=radius;
+    }
+    function creatCircle() {
+        cxt = document.getElementById('myCanvas').getContext("2d");
+        radius = Math.ceil(Math.random() * 80);
+        circle=new Circle(500, 500, radius);
+        cxt.beginPath();
+        cxt.arc(circle.x, circle.y, circle.radius,0,1.5* Math.PI);
+        cxt.fill();
+    }
+    //Revoke above functinon
+    creatCircle()
+</script>
+</body>
+</html>

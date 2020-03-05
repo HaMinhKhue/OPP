@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Tạo lớp MyDate
+    MyDate=function (day, month, year) {
+        this.day=day;
+        this.month=month;
+        this.year= year;
+
+        this.getDay=function (day) {
+            return this.day
+        }
+        this.getMonth=function (month) {
+            return this.month
+        }
+        this.getYear=function (year) {
+            return this.year
+
+        }
+
+        this.setDay=function (day) {
+            this.day=day;
+        }
+        this.setMonth=function (month) {
+            this.month=month
+        }
+        this.setYear=function (year) {
+            this.year=year
+        }
+        this.setDate=function (a,b,c) {
+            this.day=a;this.month=b;this.year=c
+        }
+    };
+
+    let date=new MyDate(9,8,1945);
+    let day = date.getDay();
+    let month = date.getMonth();
+    let year = date.getYear();
+    alert(day + "/" + month + "/" + year);
+
+    date.setDay(30);
+    date.setMonth(4)
+    date.setYear(1975)
+    day=date.getDay();month=date.getMonth();year=date.getYear()
+    alert(day + "/" + month + "/" + year);
+
+    date.setDate(15,4,2018)
+    day=date.getDay();month=date.getMonth();year=date.getYear()
+    alert(day + "/" + month + "/" + year);
+
+</script>
+
+</body>
+</html>
